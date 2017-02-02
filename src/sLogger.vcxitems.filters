@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SLogger">
+      <UniqueIdentifier>{1922ea91-05e8-48d4-b40b-5d58e9a97b9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{a1754c40-bf14-479d-8489-a70cf29ff5df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{8dfed296-129b-40aa-9f1b-cab782df5d54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processor">
+      <UniqueIdentifier>{9de48b3c-4423-4a9e-a8f7-39b0e1977f77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processor\Sender">
+      <UniqueIdentifier>{8128f800-27a9-4b68-b715-a748ffb7eda8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processor\Storage">
+      <UniqueIdentifier>{542fe75d-8692-462d-bebd-2f2059a31760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processor\Output">
+      <UniqueIdentifier>{e6a27c50-5bc1-477e-89b3-fea91cda09de}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\common.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\SLogger\SLogger.h">
+      <Filter>SLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\Include\Logger.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\Interface\ISLogMessageProcessor.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\Processor\Output\SLoggerSystemOutput.h">
+      <Filter>Processor\Output</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\Processor\Sender\SLoggerSender.h">
+      <Filter>Processor\Sender</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\Processor\Storage\SLoggerFileStorage.h">
+      <Filter>Processor\Storage</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\SLogger\SLogger.cpp">
+      <Filter>SLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\Logger.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\Processor\Output\SLoggerSystemOutput.cpp">
+      <Filter>Processor\Output</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\Processor\Sender\SLoggerSender.cpp">
+      <Filter>Processor\Sender</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\Processor\Storage\SLoggerFileStorage.cpp">
+      <Filter>Processor\Storage</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

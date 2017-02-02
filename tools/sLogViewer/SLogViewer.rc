@@ -1,0 +1,305 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Singapore) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENE)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_SINGAPORE
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 17, 15
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_CLOSE
+    SEPARATOR
+    BUTTON      ID_CAPTURE_CAPTURE
+    BUTTON      ID_CAPTURE_AUTOSCROLL
+    BUTTON      ID_CAPTURE_CLEAR
+    SEPARATOR
+    BUTTON      ID_CAPTURE_FILTER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDB_TOOBARIMAGELIST     BITMAP                  "res\\toolbar_res.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close\tCtrl+C",              ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+    END
+    POPUP "&Capture"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "Capture",                     ID_CAPTURE_CAPTURE, CHECKED
+        MENUITEM "Autoscroll",                  ID_CAPTURE_AUTOSCROLL, CHECKED
+        MENUITEM "Clear",                       ID_CAPTURE_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Filter...",                   ID_CAPTURE_FILTER
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SLogViewer.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 129, 129
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,103,50,14
+    CTEXT           "SLogViewer Application v1.0\n\n(C) Copyright 2017",IDC_STATIC,25,57,78,32
+    ICON            IDR_MAINFRAME,IDC_STATIC,54,26,21,20
+    GROUPBOX        "",IDC_STATIC,7,7,115,92
+END
+
+IDD_DIALOGFILTERRULE DIALOGEX 0, 0, 383, 178
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_WINDOWEDGE
+CAPTION "Filter Rules"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,198,155,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,262,155,50,14
+    GROUPBOX        "",IDC_STATIC,0,0,382,174
+    COMBOBOX        IDC_COMBO_ITEM,28,12,43,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_COMPARE,108,12,61,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_VALUE,196,12,99,14,ES_AUTOHSCROLL
+    LTEXT           "Item",IDC_STATIC,8,15,16,10
+    LTEXT           "Compare",IDC_STATIC,74,15,30,10
+    LTEXT           "Value",IDC_STATIC,172,15,18,10
+    LTEXT           "Category",IDC_STATIC,299,15,34,10
+    COMBOBOX        IDC_COMBO_CATEGORY,333,12,42,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Apply",IDC_BUTTON_APPLY,326,155,50,14
+    PUSHBUTTON      "Clear",IDC_BUTTON_CLEAR,7,31,50,14
+    PUSHBUTTON      "Remove",IDC_BUTTON_DEL,326,31,50,14
+    PUSHBUTTON      "Add",IDC_BUTTON_ADD,262,31,50,14
+    CONTROL         "",IDC_LIST_RULES,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,4,48,375,105
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 122
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_DIALOGFILTERRULE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 177
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "SLogViewer Module"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "SLogViewer"
+            VALUE "LegalCopyright", "Copyright 2014"
+            VALUE "OriginalFilename", "SLogViewer.exe"
+            VALUE "ProductName", "SLogViewer Module"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOGFILTERRULE DLGINIT
+BEGIN
+    IDC_COMBO_ITEM, 0x403, 4, 0
+0x6950, 0x0064, 
+    IDC_COMBO_ITEM, 0x403, 4, 0
+0x6954, 0x0064, 
+    IDC_COMBO_ITEM, 0x403, 5, 0
+0x6954, 0x6b63, "\000" 
+    IDC_COMBO_ITEM, 0x403, 7, 0
+0x6946, 0x746c, 0x7265, "\000" 
+    IDC_COMBO_ITEM, 0x403, 8, 0
+0x654d, 0x7373, 0x6761, 0x0065, 
+    IDC_COMBO_CATEGORY, 0x403, 8, 0
+0x6e49, 0x6c63, 0x6475, 0x0065, 
+    IDC_COMBO_CATEGORY, 0x403, 8, 0
+0x7845, 0x6c63, 0x6475, 0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "SLogViewer"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_OPEN            "Open an existing log file\nOpen"
+    ID_FILE_CLOSE           "Close the active log file\nClose"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+END
+
+STRINGTABLE
+BEGIN
+    ID_CAPTURE_CLEAR        "Clear all log itmes\nClear"
+    ID_CAPTURE_CAPTURE      "Enable/Disable capturing\nCapture"
+    ID_CAPTURE_AUTOSCROLL   "Enable/Disable autosrolling\nAutoscroll"
+END
+
+#endif    // English (Singapore) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

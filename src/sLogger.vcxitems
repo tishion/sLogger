@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}</ItemsProjectGuid>
+    <ItemsProjectName>sLogger</ItemsProjectName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\Logger.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\Processor\Output\SLoggerSystemOutput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\Processor\Sender\SLoggerSender.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\Processor\Storage\SLoggerFileStorage.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\SLogger\SLogger.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\common.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\Include\Logger.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\Interface\ISLogMessageProcessor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\Processor\Output\SLoggerSystemOutput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\Processor\Sender\SLoggerSender.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\Processor\Storage\SLoggerFileStorage.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\SLogger\SLogger.h" />
+  </ItemGroup>
+</Project>

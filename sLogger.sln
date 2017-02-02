@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0363010C-EBD2-4306-91DB-55EA041B313E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{9B122E54-DB51-4023-978F-C3D520C183D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{4AB11EC4-B573-4537-A897-B024123AD5BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{10BC8C10-4A3E-4637-AE28-42C7A10B30D6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "slogger-dynamic", "build\slogger-dynamic.vcxproj", "{E2B4979A-9548-4E77-9E09-698A76E0EC9D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "slogger-static", "build\slogger-static.vcxproj", "{DD69B015-3805-443E-8369-A39F00E19168}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sLoggerClientDemo", "sample\sLoggerClientDemo\sLoggerClientDemo.vcxproj", "{EACBB550-CB1F-4E00-926A-2B30A3DBC5AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DD69B015-3805-443E-8369-A39F00E19168} = {DD69B015-3805-443E-8369-A39F00E19168}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SLoggerViewer", "tools\sLogViewer\SLoggerViewer.vcxproj", "{5CEBF4BF-A964-444A-88C2-2A3EDA07E607}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sLogger", "src\sLogger.vcxitems", "{45D41ACC-2C3C-43D2-BC10-02AA73FFC7C7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sLoggerMessage", "src\sLoggerMessage.vcxitems", "{1B74DB0B-29E4-4160-BC67-AFB30CBC4362}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\sLoggerMessage.vcxitems*{1b74db0b-29e4-4160-bc67-afb30cbc4362}*SharedItemsImports = 9
+		src\sLogger.vcxitems*{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}*SharedItemsImports = 9
+		src\sLoggerMessage.vcxitems*{5cebf4bf-a964-444a-88c2-2a3eda07e607}*SharedItemsImports = 4
+		src\sLogger.vcxitems*{dd69b015-3805-443e-8369-a39f00e19168}*SharedItemsImports = 4
+		src\sLoggerMessage.vcxitems*{dd69b015-3805-443e-8369-a39f00e19168}*SharedItemsImports = 4
+		src\sLogger.vcxitems*{e2b4979a-9548-4e77-9e09-698a76e0ec9d}*SharedItemsImports = 4
+		src\sLoggerMessage.vcxitems*{e2b4979a-9548-4e77-9e09-698a76e0ec9d}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2B4979A-9548-4E77-9E09-698A76E0EC9D}.Debug|x64.ActiveCfg = Debug|x64
+		{E2B4979A-9548-4E77-9E09-698A76E0EC9D}.Debug|x64.Build.0 = Debug|x64
+		{E2B4979A-9548-4E77-9E09-698A76E0EC9D}.Debug|x86.ActiveCfg = Debug|Win32
+		{E2B4979A-9548-4E77-9E09-698A76E0EC9D}.Debug|x86.Build.0 = Debug|Win32
+		{E2B4979A-9548-4E77-9E09-698A76E0EC9D}.Release|x64.ActiveCfg = Release|x64
+		{E2B4979A-9548-4E77-9E09-698A76E0EC9D}.Release|x64.Build.0 = Release|x64
+		{E2B4979A-9548-4E77-9E09-698A76E0EC9D}.Release|x86.ActiveCfg = Release|Win32
+		{E2B4979A-9548-4E77-9E09-698A76E0EC9D}.Release|x86.Build.0 = Release|Win32
+		{DD69B015-3805-443E-8369-A39F00E19168}.Debug|x64.ActiveCfg = Debug|x64
+		{DD69B015-3805-443E-8369-A39F00E19168}.Debug|x64.Build.0 = Debug|x64
+		{DD69B015-3805-443E-8369-A39F00E19168}.Debug|x86.ActiveCfg = Debug|Win32
+		{DD69B015-3805-443E-8369-A39F00E19168}.Debug|x86.Build.0 = Debug|Win32
+		{DD69B015-3805-443E-8369-A39F00E19168}.Release|x64.ActiveCfg = Release|x64
+		{DD69B015-3805-443E-8369-A39F00E19168}.Release|x64.Build.0 = Release|x64
+		{DD69B015-3805-443E-8369-A39F00E19168}.Release|x86.ActiveCfg = Release|Win32
+		{DD69B015-3805-443E-8369-A39F00E19168}.Release|x86.Build.0 = Release|Win32
+		{EACBB550-CB1F-4E00-926A-2B30A3DBC5AB}.Debug|x64.ActiveCfg = Debug|x64
+		{EACBB550-CB1F-4E00-926A-2B30A3DBC5AB}.Debug|x64.Build.0 = Debug|x64
+		{EACBB550-CB1F-4E00-926A-2B30A3DBC5AB}.Debug|x86.ActiveCfg = Debug|Win32
+		{EACBB550-CB1F-4E00-926A-2B30A3DBC5AB}.Debug|x86.Build.0 = Debug|Win32
+		{EACBB550-CB1F-4E00-926A-2B30A3DBC5AB}.Release|x64.ActiveCfg = Release|x64
+		{EACBB550-CB1F-4E00-926A-2B30A3DBC5AB}.Release|x64.Build.0 = Release|x64
+		{EACBB550-CB1F-4E00-926A-2B30A3DBC5AB}.Release|x86.ActiveCfg = Release|Win32
+		{EACBB550-CB1F-4E00-926A-2B30A3DBC5AB}.Release|x86.Build.0 = Release|Win32
+		{5CEBF4BF-A964-444A-88C2-2A3EDA07E607}.Debug|x64.ActiveCfg = Debug|x64
+		{5CEBF4BF-A964-444A-88C2-2A3EDA07E607}.Debug|x86.ActiveCfg = Debug|Win32
+		{5CEBF4BF-A964-444A-88C2-2A3EDA07E607}.Debug|x86.Build.0 = Debug|Win32
+		{5CEBF4BF-A964-444A-88C2-2A3EDA07E607}.Release|x64.ActiveCfg = Release|Win32
+		{5CEBF4BF-A964-444A-88C2-2A3EDA07E607}.Release|x86.ActiveCfg = Release|Win32
+		{5CEBF4BF-A964-444A-88C2-2A3EDA07E607}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2B4979A-9548-4E77-9E09-698A76E0EC9D} = {9B122E54-DB51-4023-978F-C3D520C183D1}
+		{DD69B015-3805-443E-8369-A39F00E19168} = {9B122E54-DB51-4023-978F-C3D520C183D1}
+		{EACBB550-CB1F-4E00-926A-2B30A3DBC5AB} = {10BC8C10-4A3E-4637-AE28-42C7A10B30D6}
+		{5CEBF4BF-A964-444A-88C2-2A3EDA07E607} = {4AB11EC4-B573-4537-A897-B024123AD5BF}
+		{45D41ACC-2C3C-43D2-BC10-02AA73FFC7C7} = {0363010C-EBD2-4306-91DB-55EA041B313E}
+		{1B74DB0B-29E4-4160-BC67-AFB30CBC4362} = {0363010C-EBD2-4306-91DB-55EA041B313E}
+	EndGlobalSection
+EndGlobal
