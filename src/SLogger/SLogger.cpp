@@ -16,7 +16,8 @@ CSLogger& CSLogger::getInstance()
 
 CSLogger::CSLogger(void)
 {
-	Initialize();
+	m_nPid = 0;
+	m_processorList.clear();
 }
 
 CSLogger::~CSLogger(void)
@@ -24,22 +25,28 @@ CSLogger::~CSLogger(void)
 	Uninitialize();
 }
 
-bool CSLogger::Initialize()
+bool CSLogger::Initialize(const SLUtf8String& parameter)
 {
-	m_nPid = _getpid();
+	if (0 != m_nPid)
+		return true;
 
 	SLogMessageProcessorPtr pProcessor;
 	pProcessor = std::make_shared<CSLoggerSystemOutput>();
-	pProcessor->Initialize("");
+	if (!pProcessor->Initialize(parameter))
+		return false;
 	m_processorList.push_back(pProcessor);
 
 	pProcessor = std::make_shared<CSLoggerSender>();
-	pProcessor->Initialize("");
+	if (!pProcessor->Initialize(parameter))
+		return false;
 	m_processorList.push_back(pProcessor);
 
 	pProcessor = std::make_shared<CSLoggerFileStorage>();
-	pProcessor->Initialize("");
+	if (!pProcessor->Initialize(parameter))
+		return false;
 	m_processorList.push_back(pProcessor);
+
+	m_nPid = _getpid();
 
 	return true;
 }

@@ -5,6 +5,11 @@
 
 static SLUtf16StringConvert s_SLUtf16StringConvert;
 
+bool SLOGGER_API sLogger::Initialize(const std::string& parameter)
+{
+	return CSLogger::getInstance().Initialize(parameter);
+}
+
 void SLOGGER_API sLogger::LogA(int nLevel, const std::string& strFilter, const std::string strFormat, ...)
 {
 	if (strFormat.empty())

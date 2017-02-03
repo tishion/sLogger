@@ -1,4 +1,5 @@
 #pragma once
+#include "../../Interface/ISLogMessageProcessor.h"
 
 /* Header
  * /-------------------\
@@ -13,8 +14,6 @@
  * |Chunk[2]		   |			
  * |-------------------|
  */
-
-#include "../../Interface/ISLogMessageProcessor.h"
 
 /// <summary>
 /// 
@@ -97,10 +96,27 @@ public:
 	/// <param name="msg"></param>
 	virtual void ProcessLogMessage(const SLoggerMessagePtr& msg);
 
+protected:
+#if defined(_WIN32)
+	bool AppendToFile(HANDLE hFile, LPCVOID pData, DWORD dwBytesToWrite);
+#endif
+
 private:
 	/// <summary>
 	/// 
 	/// </summary>
 	SLoggerFileHeader	m_Header;
+
+#if defined(_WIN32)
+	///// <summary>
+	///// 
+	///// </summary>
+	//HANDLE m_hBinaryFile;
+
+	/// <summary>
+	/// 
+	/// </summary>
+	HANDLE m_hTextFile;
+#endif
 };
 

@@ -23,6 +23,8 @@ namespace sLogger
 		eLogLvl_Release,
 	};
 
+	bool SLOGGER_API Initialize(const std::string& parameter = "");
+
 	void SLOGGER_API LogA(int nLevel, const std::string& strFilter, const std::string strFormat, ...);
 	
 	void SLOGGER_API LogW(int nLevel, const std::wstring& strFilter, const std::wstring strFormat, ...);

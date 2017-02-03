@@ -36,7 +36,7 @@ public:
 	/// 
 	/// </summary>
 	/// <returns></returns>
-	bool Initialize();
+	bool Initialize(const SLUtf8String& parameter = "");
 
 	/// <summary>
 	/// 
