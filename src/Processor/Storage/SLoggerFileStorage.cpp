@@ -65,7 +65,8 @@ void CSLoggerFileStorage::ProcessLogMessage(const SLoggerMessagePtr& msg)
 	if (!msg) return;
 
 #if !defined(DEBUG) && !defined(_DEBUG)
-	if (msg->GetLogLevel() <= eLogLvl_Debug) return;
+	// For non-debug version, we don't save the debug log message into file
+	if (msg->GetLogLevel() <= 0) return;
 #endif
 
 	//if (m_hBinaryFile)
