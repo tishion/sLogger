@@ -1,2 +1,6 @@
 *.user
 *.aps
+/.vs
+/sLogger.VC.db
+/output
+/temp
